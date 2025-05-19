@@ -1,0 +1,49 @@
+title: 代理 IP 修复
+description: 解决在各种代理环境下客户端 IP 地址获取不正确的问题
+admin-menu: 代理 IP 设置
+
+config:
+  title: 代理 IP 设置
+  description: 配置代理环境下的 IP 地址获取方式
+
+  current-ip:
+    title: 当前 IP 地址
+    description: 这是系统默认获取到的 IP 地址
+
+  real-ip:
+    title: 检测到的真实 IP 地址
+    description: 这是通过当前配置检测到的真实 IP 地址
+
+  separator: 配置选项
+
+  trusted-proxies:
+    title: 受信任的代理
+    description: 设置受信任的代理 IP 地址或 IP 范围，每行一个。支持 IPv4 和 IPv6，支持 CIDR 表示法（如 192.168.1.0/24）、范围表示法（如 192.168.1.1-192.168.1.10）和通配符（如 192.168.1.*）
+
+  headers:
+    title: HTTP 头优先级
+    description: 设置获取客户端 IP 的 HTTP 头优先级，越靠前的优先级越高
+
+  proxy-types:
+    title: 代理类型
+    description: 选择您使用的代理类型，以便插件能够正确识别客户端 IP
+
+    proxy-headers: 常规代理头 (X-Forwarded-For, X-Real-IP 等)
+    cloudflare: CloudFlare CDN
+    incapsula: Incapsula CDN
+    custom: 自定义代理头
+
+  custom-headers:
+    title: 自定义 HTTP 头
+    description: 如果您选择了自定义代理类型，请在此处设置自定义的 HTTP 头，每行一个
+
+  test:
+    title: 测试当前配置
+    description: 点击下方按钮测试当前配置是否能正确获取您的 IP 地址
+    button: 测试
+    result: 当前获取到的 IP 地址为：:ip
+
+  save:
+    button: 保存设置
+    success: 设置已保存
+    failed: 保存设置失败

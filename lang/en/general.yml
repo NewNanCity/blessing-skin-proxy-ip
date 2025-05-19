@@ -1,0 +1,49 @@
+title: Proxy IP Fix
+description: Fix client IP address detection in various proxy environments
+admin-menu: Proxy IP Settings
+
+config:
+  title: Proxy IP Settings
+  description: Configure IP address detection in proxy environments
+
+  current-ip:
+    title: Current IP Address
+    description: This is the default IP address detected by the system
+
+  real-ip:
+    title: Detected Real IP Address
+    description: This is the real IP address detected using the current configuration
+
+  separator: Configuration Options
+
+  trusted-proxies:
+    title: Trusted Proxies
+    description: Set trusted proxy IP addresses or IP ranges, one per line. Supports IPv4 and IPv6, CIDR notation (e.g., 192.168.1.0/24), range notation (e.g., 192.168.1.1-192.168.1.10), and wildcards (e.g., 192.168.1.*)
+
+  headers:
+    title: HTTP Headers Priority
+    description: Set the priority of HTTP headers for client IP detection, higher priority headers come first
+
+  proxy-types:
+    title: Proxy Types
+    description: Select the proxy types you are using to help the plugin correctly identify client IPs
+
+    proxy-headers: 'Common Proxy Headers (X-Forwarded-For, X-Real-IP, etc.)'
+    cloudflare: 'CloudFlare CDN'
+    incapsula: 'Incapsula CDN'
+    custom: 'Custom Headers'
+
+  custom-headers:
+    title: Custom HTTP Headers
+    description: If you selected the custom proxy type, set your custom HTTP headers here, one per line
+
+  test:
+    title: Test Current Configuration
+    description: Click the button below to test if your current configuration can correctly detect your IP address
+    button: Test
+    result: 'Current detected IP address is: :ip'
+
+  save:
+    button: Save Settings
+    success: Settings saved
+    failed: Failed to save settings

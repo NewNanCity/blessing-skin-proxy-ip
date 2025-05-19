@@ -1,0 +1,19 @@
+{
+  "name": "blessing-skin-proxy-ip",
+  "title": "BlessingSkin\\ProxyIP::general.title",
+  "version": "0.1.0",
+  "description": "BlessingSkin\\ProxyIP::general.description",
+  "author": "Ke Wang",
+  "url": "https://github.com/NewNanCity/blessing-skin-proxy-ip",
+  "namespace": "BlessingSkin\\ProxyIP",
+  "require": {
+    "blessing-skin-server": "^6"
+  },
+  "enchants": {
+    "config": "Configuration",
+    "icon": {
+      "fa": "network-wired",
+      "bg": "primary"
+    }
+  }
+}
