@@ -73,14 +73,12 @@ return function (Dispatcher $events, Filter $filter) {
             // 获取 IP 地址
             $clientIp = $whip->getValidIpAddress();
             if ($clientIp !== false) {
-                Log::debug("[ProxyIP] 成功获取客户端 IP: {$clientIp}");
                 return $clientIp;
             }
         } catch (\Exception $e) {
-            Log::error("[ProxyIP] 获取客户端 IP 时出错", ['exception' => $e]);
+            Log::error("[ProxyIP] Error occurred while retrieving client IP", ['exception' => $e]);
         }
 
-        Log::debug("[ProxyIP] 使用默认 IP: {$ip}");
         return $ip;
     });
 };
